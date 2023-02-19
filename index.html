@@ -110,6 +110,7 @@
 
         a {
             text-decoration: none;
+            color: inherit;
         }
 
 
@@ -126,6 +127,14 @@
 
         .darken-scrim {
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 85%, #160b0b 100%)
+        }
+
+        .project-scrim {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 75%, #160b0b 100%)
+        }
+
+        .contact-scrim {
+            background: linear-gradient(180deg, rgba(212, 166, 21, 0.1) 0%, rgba(34, 34, 34, 0.69) 77.08%);
         }
 
         .text-secondary {
@@ -205,6 +214,17 @@
             background: no-repeat linear-gradient(45deg, #1b2735 0, #090a0f 100%)
         }
 
+        .project-slide-description {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: absolute;
+            height: 33%;
+            width: 100%;
+            bottom: 0
+        }
+
         .project-card {
             overflow: hidden;
             margin: 1rem;
@@ -238,10 +258,11 @@
             display: inline-block;
             border-radius: 2rem;
             border: 2px solid #D4A615;
-            padding: 0.5rem 2rem;
-            margin-top: 1rem;
+            padding: 0.3rem 2rem;
+            margin-top: 1.5rem;
             color: #D4A615;
             transition: 0.2s all;
+            font-family: 'Roboto Slab', sans-serif;
         }
 
         .github-button:hover {
@@ -485,20 +506,6 @@
             </div>
 
         </amp-story-grid-layer>
-
-        <amp-story-animation layout="nodisplay" trigger="visibility">
-            <script type="application/json">
-                {
-                    "selector": "#shipMain",
-                    "duration": "1s",
-                    "delay": 400,
-                    "keyframes": {
-                        "transform": "translateY(101px)",
-                        "opacity": 0
-                    }
-                }
-            </script>
-        </amp-story-animation>
     </amp-story-page>
 
     <amp-story-page id="about">
@@ -509,7 +516,7 @@
 
         <amp-story-grid-layer style="align-content: space-between" template="vertical" class="darken-scrim">
             <div>
-                <h1 class="section-header">
+                <h1 animate-in="fade-in" animate-in-duration="1s"  class="section-header">
                     <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
                         O mnie
                     </amp-fit-text>
@@ -535,7 +542,7 @@
 
         <amp-story-grid-layer template="thirds" class="darken-scrim">
             <div grid-area="upper-third">
-                <h1 class="section-header">
+                <h1 animate-in="fade-in" animate-in-duration="1s"  class="section-header">
                     <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
                         Poznaj moje projekty
                     </amp-fit-text>
@@ -543,34 +550,254 @@
             </div>
         </amp-story-grid-layer>
 
-        <amp-story-page-attachment title="Moje projekty" cta-text="Przesuń w górę" layout="nodisplay">
-            <div style="background: rgba(207, 48, 86, 1);
-" class="project-card">
-                <div class="project-card-video">
-                    <amp-video style="border-radius: 1.9rem; border: 8px solid white;" controls loop noaudio layout="fill" width="720" height="1280" poster="/assets/phyxlist-poster.png" src="/assets/phyxlist.mp4"></amp-video>
-                    <div class="project-card-video-overlay">
-                        <a target="_blank" href="https://github.com/kleczewsky/PhyxList">
-                            <h2 style="font-weight: 500; margin-bottom: 0; margin-top: 0.7rem" class="text-secondary">
-                                Phyxlist
-                            </h2>
-                        </a>
+    </amp-story-page>
 
-                        <p style="opacity: 0.6; margin-bottom: 2rem; margin-top: 0" class="small text-secondary">REACT | LARAVEL | MATTER.JS</p>
+    <amp-story-page id="kleczewsky.com">
+        <amp-story-grid-layer template="fill">
+            <amp-video loop autoplay noaudio poster="/assets/kleczewsky-poster.png" src="/assets/kleczewsky.mp4" width="1280" height="720" layout="responsive" alt="Video of futuristic looking square shape">
+            </amp-video>
+        </amp-story-grid-layer>
 
-
-                    </div>
-                </div>
-                <p style="margin: 0; color: #fff; padding: 1rem; text-align: center">
-                    LISTA ZADAŃ DO ZROBIENIA OPARTA O SILNIK FIZYKI MATTER.JS.
-
+        <amp-story-grid-layer template="thirds" class="project-scrim">
+            <div grid-area="upper-third">
+                <h1 animate-in="fade-in" animate-in-duration="1s"  class="section-header">
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
+                        Kleczewsky.com
+                    </amp-fit-text>
+                </h1>
+            </div>
+            <div class="project-slide-description">
+                <amp-img src="/assets/lower.png" width="820" height="500" layout="fill" alt="decoration">
+                </amp-img>
+                <p animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.3s" style=" max-width: 400px; z-index: 1; padding: 0 1rem" class="text-muted">
+                    GŁÓWNA STRONA KLECZEWSKY.COM WYKONANA Z POMOCĄ THREE.JS
                     <br>
-                    <a class="github-button" target="_blank" href="https://github.com/kleczewsky/PhyxList">
+                    <a animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.5s" class="github-button"target="_blank" href="https://github.com/kleczewsky/kleczewsky.com">
                         Github
                     </a>
                 </p>
             </div>
-        </amp-story-page-attachment>
 
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <amp-story-page id="phyxlist">
+        <amp-story-grid-layer template="fill">
+            <amp-video loop autoplay noaudio poster="/assets/phyxlist-poster.png" src="/assets/phyxlist.mp4" width="1280" height="720" layout="responsive" alt="Video of futuristic looking square shape">
+            </amp-video>
+        </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="thirds" class="project-scrim">
+            <div grid-area="upper-third">
+                <h1 animate-in="fade-in" animate-in-duration="1s"  class="section-header">
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
+                        PhyxList
+                    </amp-fit-text>
+                </h1>
+            </div>
+            <div class="project-slide-description">
+                <amp-img src="/assets/lower.png" width="820" height="500" layout="fill" alt="decoration">
+                </amp-img>
+                <p animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.3s" style=" max-width: 400px; z-index: 1; padding: 0 1rem" class="text-muted">
+                    LISTA ZADAŃ DO ZROBIENIA OPARTA O SILNIK FIZYKI MATTER.JS.
+                    <br>
+                    <a animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.5s" class="github-button"target="_blank" href="https://github.com/kleczewsky/PhyxList">
+                        Github
+                    </a>
+                </p>
+            </div>
+
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <amp-story-page id="webape">
+        <amp-story-grid-layer template="fill">
+            <amp-video loop autoplay noaudio poster="/assets/webape-poster.png" src="/assets/webape.mp4" width="1280" height="720" layout="responsive" alt="Video of futuristic looking square shape">
+            </amp-video>
+        </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="thirds" class="project-scrim">
+            <div grid-area="upper-third">
+                <h1 animate-in="fade-in" animate-in-duration="1s"  class="section-header">
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
+                        WebApe
+                    </amp-fit-text>
+                </h1>
+            </div>
+            <div class="project-slide-description">
+                <amp-img src="/assets/lower.png" width="820" height="500" layout="fill" alt="decoration">
+                </amp-img>
+                <p animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.3s" style=" max-width: 400px; z-index: 1; padding: 0 1rem" class="text-muted">
+                    DESKTOPOWA WERSJA STRONY FIRMY WEBAPE, MOTYWEM PRZEWODNIM ZOSTAŁ KOSMOS.
+                    <br>
+                    <a animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.5s" class="github-button"target="_blank" href="https://github.com/kleczewsky/webape-example">
+                        Github
+                    </a>
+                </p>
+            </div>
+
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <amp-story-page id="grajs">
+        <amp-story-grid-layer template="fill">
+            <amp-video loop autoplay noaudio poster="/assets/grajs-poster.jpg" src="/assets/grajs.mp4" width="1280" height="720" layout="responsive" alt="Video of futuristic looking square shape">
+            </amp-video>
+        </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="thirds" class="project-scrim">
+            <div grid-area="upper-third">
+                <h1 animate-in="fade-in" animate-in-duration="1s"  class="section-header">
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
+                        GraJS
+                    </amp-fit-text>
+                </h1>
+            </div>
+            <div class="project-slide-description">
+                <amp-img src="/assets/lower.png" width="820" height="500" layout="fill" alt="decoration">
+                </amp-img>
+                <p animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.3s" style=" max-width: 400px; z-index: 1; padding: 0 1rem" class="text-muted">
+                    NIEWIELKA GRA, W KTÓREJ GRACZ WCIELA SIĘ W PILOTA STATKU KOSMICZNEGO.
+                    <br>
+                    <a animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.5s" class="github-button"target="_blank" href="https://github.com/kleczewsky/GraJS.js">
+                        Github
+                    </a>
+                </p>
+            </div>
+
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+
+    <amp-story-page id="pong">
+        <amp-story-grid-layer template="fill">
+            <amp-video loop autoplay noaudio poster="/assets/pong-poster.png" src="/assets/pong.mp4" width="1280" height="720" layout="responsive" alt="Video of futuristic looking square shape">
+            </amp-video>
+        </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="thirds" class="project-scrim">
+            <div grid-area="upper-third">
+                <h1 animate-in="fade-in" animate-in-duration="1s"  class="section-header">
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
+                        Pong
+                    </amp-fit-text>
+                </h1>
+            </div>
+            <div class="project-slide-description">
+                <amp-img src="/assets/lower.png" width="820" height="500" layout="fill" alt="decoration">
+                </amp-img>
+                <p animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.3s" style=" max-width: 400px; z-index: 1; padding: 0 1rem" class="text-muted">
+                    STARY DOBRY PONG. NIEKOŃCZĄCA SIĘ ZABAWA W PROSTEJ FORMIE.
+                    <br>
+                    <a animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.5s" class="github-button"target="_blank" href="https://github.com/kleczewsky/pong.js">
+                        Github
+                    </a>
+                </p>
+            </div>
+
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <amp-story-page id="rickandsearch">
+        <amp-story-grid-layer template="fill">
+            <amp-video loop autoplay noaudio poster="/assets/rickandsearch-poster.jpg" src="/assets/rickandsearch.mp4" width="1280" height="720" layout="responsive" alt="Video of futuristic looking square shape">
+            </amp-video>
+        </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="thirds" class="project-scrim">
+            <div grid-area="upper-third">
+                <h1 animate-in="fade-in" animate-in-duration="1s"  class="section-header">
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
+                        Rick&Search
+                    </amp-fit-text>
+                </h1>
+            </div>
+            <div class="project-slide-description">
+                <amp-img src="/assets/lower.png" width="820" height="500" layout="fill" alt="decoration">
+                </amp-img>
+                <p animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.3s" style=" max-width: 400px; z-index: 1; padding: 0 1rem" class="text-muted">
+                    PRZEGLĄDARKA STATUSÓW POSTACI Z SERIALU RICK AND MORTY.
+                    <br>
+                    <a animate-in="fade-in" animate-in-duration="2s" animate-in-delay="0.5s" class="github-button"target="_blank" href="https://github.com/kleczewsky/rickandmortyBrowser">
+                        Github
+                    </a>
+                </p>
+            </div>
+
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <amp-story-page id="contact">
+        <amp-story-grid-layer template="fill">
+            <amp-video autoplay noaudio poster="/assets/hakunamatata-poster.png" src="/assets/hakunamatata.mp4" width="1280" height="720" layout="responsive" alt="Video of futuristic looking square shape">
+            </amp-video>
+        </amp-story-grid-layer>
+
+        <amp-story-grid-layer template="thirds" class="contact-scrim">
+            <div grid-area="upper-third">
+                <h1 animate-in="fade-in" animate-in-duration="1s"  class="section-header">
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
+                        Skontaktuj się
+                    </amp-fit-text>
+                </h1>
+            </div>
+            <div style="align-items: flex-end; height: 50%" class="project-slide-description">
+                <amp-img src="/assets/contact.png" width="820" height="500" layout="fill" alt="decoration">
+                </amp-img>
+
+                <div style="max-width: 400px; z-index: 1; font-family: 'Roboto Slab', sans-serif; height: 45%; width: 75%;" class="text-secondary">
+
+                    <div style="position: absolute; top:34%; left: 0; text-align: center; width: 100%">
+                        <h2>
+                            <span style="background: white; padding: 0.3rem 1.5rem; color: #000; font-weight: 600; white-space: nowrap">
+                                Eryk Kleczewski
+                            </span>
+                        </h2>
+                    </div>
+
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
+                        Full-Stack Developer
+                    </amp-fit-text>
+                </div>
+            </div>
+
+
+        </amp-story-grid-layer>
+
+        <amp-story-page-attachment title="Kontakt" cta-text="Zobacz więcej" layout="nodisplay">
+            <div style="padding: 0 1rem">
+                <h2 style="font-weight: 500;" >
+                    <span class="text-secondary">Cześć!</span> Fajnie, że tu jesteś!
+                </h2>
+                <p>
+                    Jeżeli chcesz się ze mną skontaktować możesz zrobić to przez poniższe sposoby.
+                </p>
+
+                <h4 class="text-secondary">
+                    <a target="_blank" href=mailto:ekkleczewski@gmail.com">
+                        ekkleczewski@gmail.com
+                    </a>
+                </h4>
+
+                <h4 class="text-secondary">
+                    <a target="_blank" href=https://www.linkedin.com/in/kleczewsky/>
+                        LinkedIn
+                    </a>
+                </h4>
+
+                <h4 class="text-secondary">
+                    <a target="_blank" href=https://github.com/kleczewsky>
+                        Github
+                    </a>
+                </h4>
+
+                <p style="text-align: end; margin-bottom: 2rem">
+                    Hakuna matata! Do zobaczenia!
+                </p>
+
+            </div>
+
+        </amp-story-page-attachment>
     </amp-story-page>
 
 
