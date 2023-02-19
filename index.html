@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <meta name="theme-color" content="#D4A615" />
+    <meta name="theme-color" content="#D4A615"/>
 
     <title>Kleczewsky.com - Sky is no longer the limit</title>
     <meta name="description"
@@ -108,9 +108,13 @@
             font-weight: 400;
         }
 
+        a {
+            text-decoration: none;
+        }
+
 
         @media only screen
-        and (min-width : 400px) {
+        and (min-width: 400px) {
             #cover amp-story-grid-layer {
                 padding: 86px 68px 32px;
             }
@@ -129,14 +133,14 @@
         }
 
         .text-muted {
-            color: rgba(255, 255, 255, 0.8)
+            color: rgba(255, 255, 255, 0.6)
         }
 
         .small {
             font-size: 0.9rem;
         }
 
-        .section-header{
+        .section-header {
             font-weight: bold;
             border-left: 8px solid #D4A615;
             padding-left: 20px;
@@ -200,6 +204,51 @@
         .parallax-stars {
             background: no-repeat linear-gradient(45deg, #1b2735 0, #090a0f 100%)
         }
+
+        .project-card {
+            overflow: hidden;
+            margin: 1rem;
+            border-radius: 2rem;
+            box-shadow: 1px 2px 10px 0px rgb(0 0 0 / 50%);
+
+        }
+
+        .project-card video {
+            object-fit: cover;
+
+        }
+
+        .project-card .project-card-video {
+            min-height: 400px;
+            position: relative;
+        }
+
+
+        .project-card .project-card-video-overlay {
+            position: absolute;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.30) 70%, rgba(0, 0, 0, 0) 100%);
+            text-align: center;
+            left: 8px;
+            top: 8px;
+            right: 8px;
+            border-radius: 1.9rem;
+        }
+
+        .github-button {
+            display: inline-block;
+            border-radius: 2rem;
+            border: 2px solid #D4A615;
+            padding: 0.5rem 2rem;
+            margin-top: 1rem;
+            color: #D4A615;
+            transition: 0.2s all;
+        }
+
+        .github-button:hover {
+            border-color: #f8cc46;
+            color: #f8cc46
+        }
+
         .dynamic-text-wrapper {
             font-weight: 600;
             height: 60px;
@@ -261,21 +310,25 @@
             animation-delay: 0.7s, 2.9s;
             left: 39%;
         }
+
         #ship1 {
             animation-delay: 0.9s, 3.2s;
             top: 53%;
             right: 24%;
         }
+
         #ship2 {
             animation-delay: 1s, 3.4s;
             top: 53%;
             left: 22%;
         }
+
         #shipAtt1 {
             animation-delay: 0.5s, 2.5s;
             top: 33%;
             right: 15%;
         }
+
         #shipAtt2 {
             animation-delay: 0.6s, 2.8s;
             top: 35%;
@@ -304,53 +357,54 @@
 
         @keyframes shipIdle {
             0% {
-                transform: translate3D(0px,0px,0px)
+                transform: translate3D(0px, 0px, 0px)
             }
 
             50% {
-                transform: translate3D(6px,6px,6px)
+                transform: translate3D(6px, 6px, 6px)
             }
 
             100% {
-                transform: translate3D(0px,0px,0px)
+                transform: translate3D(0px, 0px, 0px)
             }
         }
 
         @keyframes scroll-words {
-            0%,10.50%,100% {
-                transform: translate3d(0,0,0)
+            0%, 10.50%, 100% {
+                transform: translate3d(0, 0, 0)
             }
 
-            12.50%,23.00% {
-                transform: translate3d(0,-70px,0)
+            12.50%, 23.00% {
+                transform: translate3d(0, -70px, 0)
             }
 
-            25.00%,35.50% {
-                transform: translate3d(0,-140px,0)
+            25.00%, 35.50% {
+                transform: translate3d(0, -140px, 0)
             }
 
-            37.50%,48.00% {
-                transform: translate3d(0,-210px,0)
+            37.50%, 48.00% {
+                transform: translate3d(0, -210px, 0)
             }
 
-            50.00%,60.50% {
-                transform: translate3d(0,-280px,0)
+            50.00%, 60.50% {
+                transform: translate3d(0, -280px, 0)
             }
 
-            62.50%,73.00% {
-                transform: translate3d(0,-210px,0)
+            62.50%, 73.00% {
+                transform: translate3d(0, -210px, 0)
             }
 
-            75.00%,85.50% {
-                transform: translate3d(0,-140px,0)
+            75.00%, 85.50% {
+                transform: translate3d(0, -140px, 0)
             }
 
-            87.50%,98.00% {
-                transform: translate3d(0,-70px,0)
+            87.50%, 98.00% {
+                transform: translate3d(0, -70px, 0)
             }
         }
+
         @keyframes opacity-scroll-words {
-            0%,100% {
+            0%, 100% {
                 opacity: 0
             }
 
@@ -365,9 +419,9 @@
 <!-- Cover page -->
 <amp-story standalone
            title="Kleczewsky"
-           publisher="Eryk Kleczewski" >
-<!--           publisher-logo-src="assets/AMP-Brand-White-Icon.svg"-->
-<!--           poster-portrait-src="assets/cover.jpg" -->
+           publisher="Eryk Kleczewski">
+    <!--           publisher-logo-src="assets/AMP-Brand-White-Icon.svg"-->
+    <!--           poster-portrait-src="assets/cover.jpg" -->
 
     <amp-story-page id="cover">
 
@@ -390,11 +444,11 @@
             <div grid-area="upper-third">
                 <amp-img src="/assets/kleczewsky.svg" width="300" height="50" layout="responsive" alt="Kleczewsky Logo">
                 </amp-img>
-                    <h5 style="text-align: center">
-                        <amp-fit-text width="300" height="40" layout="responsive" max-font-size="24">
-                            Witaj w moim świecie
-                        </amp-fit-text>
-                    </h5>
+                <h5 style="text-align: center">
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="24">
+                        Witaj w moim świecie
+                    </amp-fit-text>
+                </h5>
             </div>
             <div grid-area="middle-third">
 
@@ -419,13 +473,13 @@
                     Full-Stack Developer
                 </h4>
                 <div class="dynamic-text-wrapper">
-                        <div class="dynamic-text-list">
-                            <span class="dynamic-text-item">Laravel</span>
-                            <span class="dynamic-text-item">React</span>
-                            <span class="dynamic-text-item">JQuery</span>
-                            <span class="dynamic-text-item">Three.js</span>
-                            <span class="dynamic-text-item">Bootstrap</span>
-                        </div>
+                    <div class="dynamic-text-list">
+                        <span class="dynamic-text-item">Laravel</span>
+                        <span class="dynamic-text-item">React</span>
+                        <span class="dynamic-text-item">JQuery</span>
+                        <span class="dynamic-text-item">Three.js</span>
+                        <span class="dynamic-text-item">Bootstrap</span>
+                    </div>
                 </div>
 
             </div>
@@ -438,8 +492,10 @@
                     "selector": "#shipMain",
                     "duration": "1s",
                     "delay": 400,
-                    "keyframes":  {"transform": "translateY(101px)", "opacity": 0}
-
+                    "keyframes": {
+                        "transform": "translateY(101px)",
+                        "opacity": 0
+                    }
                 }
             </script>
         </amp-story-animation>
@@ -462,24 +518,59 @@
 
             <div>
                 <h2 style="margin-bottom: 0.5rem">Cześć! 👋</h2>
-                <p style="font-weight: 700; line-height: 19px;" class="text-muted small">
-                    Jestem full stack developerem. Główne technologie, których używam to Laravel i React. Pracuję z dbałością o szczegóły, aby dostarczać i ulepszać funkcje, z których sam byłbym dumny. Staram się poprawić doświadczenia ludzi korzystających z sieci poprzez zrozumienie ich potrzeb i nawyków. Czerpię ogromną przyjemność z pracy z nowymi technologiami, stawiam sobie za cel doskonalenie siebie i swoich umiejętności. Zawsze jestem wdzięczny ludziom, którzy dzielą się swoją wiedzą.
+                <p style="font-weight: 500; line-height: 19px;" class="text-muted small">
+                    Jestem full stack developerem. Główne technologie, których używam to Laravel i React. Pracuję z dbałością o szczegóły, aby dostarczać i ulepszać funkcje, z których sam byłbym dumny. Staram się poprawić doświadczenia ludzi korzystających z sieci poprzez zrozumienie ich potrzeb i
+                    nawyków. Czerpię ogromną przyjemność z pracy z nowymi technologiami, stawiam sobie za cel doskonalenie siebie i swoich umiejętności. Zawsze jestem wdzięczny ludziom, którzy dzielą się swoją wiedzą.
                 </p>
             </div>
 
         </amp-story-grid-layer>
+    </amp-story-page>
 
-        <amp-story-animation layout="nodisplay" trigger="visibility">
-            <script type="application/json">
-                {
-                    "selector": "#shipMain",
-                    "duration": "1s",
-                    "delay": 400,
-                    "keyframes":  {"transform": "translateY(101px)", "opacity": 0}
+    <amp-story-page id="projects">
+        <amp-story-grid-layer template="fill">
+            <amp-video loop autoplay noaudio poster="/assets/projects-poster.png" src="/assets/projects.mp4" width="1280" height="720" layout="responsive" alt="Video of futuristic looking square shape">
+            </amp-video>
+        </amp-story-grid-layer>
 
-                }
-            </script>
-        </amp-story-animation>
+        <amp-story-grid-layer template="thirds" class="darken-scrim">
+            <div grid-area="upper-third">
+                <h1 class="section-header">
+                    <amp-fit-text width="300" height="40" layout="responsive" max-font-size="30">
+                        Poznaj moje projekty
+                    </amp-fit-text>
+                </h1>
+            </div>
+        </amp-story-grid-layer>
+
+        <amp-story-page-attachment title="Moje projekty" cta-text="Przesuń w górę" layout="nodisplay">
+            <div style="background: rgba(207, 48, 86, 1);
+" class="project-card">
+                <div class="project-card-video">
+                    <amp-video style="border-radius: 1.9rem; border: 8px solid white;" controls loop noaudio layout="fill" width="720" height="1280" poster="/assets/phyxlist-poster.png" src="/assets/phyxlist.mp4"></amp-video>
+                    <div class="project-card-video-overlay">
+                        <a target="_blank" href="https://github.com/kleczewsky/PhyxList">
+                            <h2 style="font-weight: 500; margin-bottom: 0; margin-top: 0.7rem" class="text-secondary">
+                                Phyxlist
+                            </h2>
+                        </a>
+
+                        <p style="opacity: 0.6; margin-bottom: 2rem; margin-top: 0" class="small text-secondary">REACT | LARAVEL | MATTER.JS</p>
+
+
+                    </div>
+                </div>
+                <p style="margin: 0; color: #fff; padding: 1rem; text-align: center">
+                    LISTA ZADAŃ DO ZROBIENIA OPARTA O SILNIK FIZYKI MATTER.JS.
+
+                    <br>
+                    <a class="github-button" target="_blank" href="https://github.com/kleczewsky/PhyxList">
+                        Github
+                    </a>
+                </p>
+            </div>
+        </amp-story-page-attachment>
+
     </amp-story-page>
 
 
