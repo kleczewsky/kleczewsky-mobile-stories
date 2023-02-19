@@ -1,19 +1,12 @@
-# AMP Story tutorial "Joy of Pets"
+# AMP ⚡ Web Story for kleczewsky.com
 
-This folder contains the files for the "Create a visual AMP Story" tutorial.
+This project is a blazing fast AMP ⚡ alternative to my main website in the form of quick and pleasant web story.
 
-## Files included
+___
 
-```text
-amp-pets-story
-  ├── assets/
-  │   └──  images, video, audio for story
-  ├── bookend.json   
-  ├── pets.html            --- Incomplete version
-  ├── pets-completed.html  --- Completed version
-  └── README.md
-```
+You can read more on web stories here: 
 
-## License
+https://amp.dev/about/stories.html
+___
 
-This tutorial is licensed under [Apache License, Version 2.0](https://github.com/ampproject/docs/blob/master/LICENSE).
+### Hakuna matata!
